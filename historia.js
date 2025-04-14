@@ -39,30 +39,36 @@ document.addEventListener('DOMContentLoaded', () => {
             if (indexLetra < textoAtual.length) {
                 container.innerHTML += textoAtual.charAt(indexLetra);
                 indexLetra++;
-                setTimeout(() => digitarTexto(textos, callback), 100); 
+                setTimeout(() => digitarTexto(textos, callback), 150); 
             } else {
                 indexTexto++; 
-                indexLetra = 0; // 
-                container.innerHTML += "<br><br>"; // 
-                setTimeout(() => digitarTexto(textos, callback), 1000); // 
+                indexLetra = 0;
+                container.innerHTML += "<br><br>";
+                setTimeout(() => digitarTexto(textos, callback), 1000); 
             }
         } else if (callback) {
             setTimeout(callback, 2000); 
         }
     }
 
-    // 
     function iniciarSegundaParte() {
-        container.innerHTML = ""; // 
-        indexTexto = 0; // 
-        indexLetra = 0; // 
-        digitarTexto(textosParte2, finalizarHistoria); // 
+        container.innerHTML = "";
+        indexTexto = 0;
+        indexLetra = 0;
+        digitarTexto(textosParte2, finalizarHistoria);
     }
 
-    // 
+
     function finalizarHistoria() {
         container.innerHTML += "<h2 style='text-align: center; margin-top: 50px;'> Matheus e Natalia então, estarão sempre juntos um ao outro. amando um ao outro, sempre.</h2>";
     }
 
-    exibirTitulo(); // 
+    exibirTitulo();
+
+    function finalizarHistoria() {
+        container.innerHTML += "<h2 style='text-align: center; margin-top: 50px;'>E assim termina a história de um grande amor.</h2>";
+        setTimeout(() => {
+            window.location.href = "album.html";
+        }, 9000);
+    }
 });

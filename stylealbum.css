@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.titulo-album {
+    text-align: center;
+    font-size: 36px;
+    margin: 20px 0;
+    color: #e97d71;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.foto-item {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 200px;
+}
+
+.foto-item img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.data-foto {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
