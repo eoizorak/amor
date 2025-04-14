@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     exibirTitulo();
 
     function finalizarHistoria() {
-        container.innerHTML += "<h2 style='text-align: center; margin-top: 50px;'>E assim termina a história de um grande amor.</h2>";
+        container.innerHTML += "<h2 style='text-align: center; margin-top: 50px;'>E assim começou a história de um grande amor, que será eterno.</h2>";
         setTimeout(() => {
             window.location.href = "album.html";
         }, 9000);
