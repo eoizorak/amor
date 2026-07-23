@@ -7,17 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let anos = dataAtual.getFullYear() - dataInicial.getFullYear();
         let meses = dataAtual.getMonth() - dataInicial.getMonth();
         let dias = dataAtual.getDate() - dataInicial.getDate();
-        let horas = dataAtual.getHours() - dataInicial.getHours();
-        let minutos = dataAtual.getMinutes() - dataInicial.getMinutes();
 
-        if (minutos < 0) {
-            horas--;
-            minutos += 60;
-        }
-        if (horas < 0) {
-            dias--;
-            horas += 24;
-        }
         if (dias < 0) {
             meses--;
             dias += new Date(dataAtual.getFullYear(), dataAtual.getMonth(), 0).getDate();
@@ -26,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
             anos--;
             meses += 12;
         }
+
+        const horas = dataAtual.getHours();
+        const minutos = dataAtual.getMinutes();
 
         const contador = document.getElementById('contador');
         if (contador) {
