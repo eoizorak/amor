@@ -40,5 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     calcularTempoJuntos();
-    setInterval(calcularTempoJuntos, 86400000);
+    setInterval(calcularTempoJuntos, 60000);
 });
